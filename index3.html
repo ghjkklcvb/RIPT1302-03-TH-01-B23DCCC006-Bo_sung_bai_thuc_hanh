@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu Các Loại Biểu Đồ</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 247, 231);
+}
+
+.container {
+    max-width: 1500px;
+    margin: 90px auto;
+    padding: 0 50px;
+
+}
+
+h1, h2 {
+    text-align: center;
+    color: #800808
+
+}
+
+.chart {
+    margin-bottom: 50px;
+}
+
+.chart p {
+    text-align: center;
+    color: rgb(23, 143, 2);
+}
+
+#scatterPlot, #barChart, #pieChart, #donutChart {
+    width: 100%;
+    height: 400px;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Giới Thiệu Các Loại Biểu Đồ</h1>
+        <div class="chart">
+            <h2>SCATTER PLOT</h2>
+            <p>
+                Mô tả: Biểu đồ Scatter sử dụng các điểm để thể hiện mối quan hệ giữa hai biến. Mỗi điểm dữ liệu được biểu thị bằng một điểm trên mặt phẳng, với vị trí của điểm được xác định bởi các giá trị của nó cho hai biến. Biểu đồ Scatter có thể giúp bạn hình dung mối tương quan giữa hai biến, cũng như xác định các điểm bất thường hoặc xu hướng tiềm ẩn.
+            </p>
+            <div id="scatterPlot"></div>
+            <p>
+                Định nghĩa: Biểu đồ Scatter được vẽ bằng cách đặt các điểm dữ liệu lên một mặt phẳng, với vị trí của mỗi điểm được xác định bởi các giá trị của nó cho hai biến. Các trục của biểu đồ thường được đánh dấu bằng các đơn vị của các biến tương ứng.
+            </p>
+
+        </div>
+        <div class="chart">
+            <h2>BAR CHART</h2>
+            <p>
+                Mô tả: Biểu đồ Cột sử dụng các cột để so sánh giá trị của các danh mục khác nhau. Mỗi danh mục được biểu thị bằng một cột hình chữ nhật, với chiều cao của cột được xác định bởi giá trị của nó cho danh mục tương ứng. Biểu đồ Cột có thể giúp bạn so sánh giá trị của các danh mục một cách trực quan.
+            </p>
+            <div id="barChart"></div>
+            <p>
+                Định nghĩa: Biểu đồ Cột được vẽ bằng cách đặt các cột hình chữ nhật cạnh nhau, với chiều cao của mỗi cột được xác định bởi giá trị của nó cho danh mục tương ứng. Các trục của biểu đồ thường được đánh dấu bằng tên của các danh mục và đơn vị đo lường.
+            </p>
+        </div>
+        <div class="chart">
+            <h2>PIE CHART</h2>
+            <p>
+                Mô tả: Biểu đồ Tròn sử dụng một hình tròn để thể hiện tỷ lệ phần trăm của các danh mục khác nhau. Mỗi danh mục được biểu thị bằng một phần của hình tròn, với kích thước của phần được xác định bởi tỷ lệ phần trăm của nó trong tổng số. Biểu đồ Tròn có thể giúp bạn hình dung tỷ lệ phần trăm của các danh mục một cách trực quan.
+            </p>
+            <div id="pieChart"></div>
+            <p>
+                Định nghĩa: Biểu đồ Tròn được vẽ bằng cách chia một hình tròn thành các phần, với kích thước của mỗi phần được xác định bởi tỷ lệ phần trăm của nó trong tổng số. Mỗi phần thường được tô màu khác nhau và được ghi chú bằng tên của danh mục tương ứng.
+            </p>
+        </div>
+        <div class="chart">
+            <h2>DONUT CHART</h2>
+            <p>
+                Mô tả: Biểu đồ Donut là một dạng biến thể của Biểu đồ Tròn, với một lỗ ở giữa. Biểu đồ Donut được sử dụng để thể hiện tỷ lệ phần trăm của các danh mục khác nhau, nhưng nó cũng có thể được sử dụng để làm nổi bật một danh mục cụ thể bằng cách đặt nó ở giữa lỗ.
+            </p>
+            <div id="donutChart"></div>
+            <p>
+                Định nghĩa: Biểu đồ Donut được vẽ bằng cách chia một hình tròn thành các phần, với kích thước của mỗi phần được xác định bởi tỷ lệ phần trăm của nó trong tổng số. Biểu đồ Donut có một lỗ ở giữa, thường được tô màu khác với các phần còn lại.
+            </p>
+        </div>
+        <div class="chart">
+            <h2>BUBBLE CHART</h2>
+            <p>
+                Bubble Chart là một loại biểu đồ thống kê thường được sử dụng để hiển thị dữ liệu dưới dạng các hình tròn (hay "bubbles") trên một mặt phẳng. Mỗi hình tròn biểu diễn một điểm dữ liệu, và kích thước của hình tròn thường thể hiện một thuộc tính thứ ba của dữ liệu, trong khi vị trí của hình tròn trên mặt phẳng thể hiện hai thuộc tính khác của dữ liệu.
+            </p>
+            <div id="bubbleChart"></div>
+            <p>
+                Bubble Chart thường được sử dụng để so sánh các điểm dữ liệu dựa trên ba thuộc tính khác nhau. Biểu đồ này rất hữu ích để biểu diễn dữ liệu có kích thước biến đổi lớn, vì kích thước của hình tròn có thể dễ dàng được điều chỉnh để phản ánh sự biến đổi đó.
+            </p>
+        </div>
+    </div>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    
+    const scatterPlotData = [{
+        x: [1, 2, 3, 4, 5],
+        y: [2, 3, 5, 7, 11],
+        mode: 'markers',
+        type: 'scatter'
+    }];
+    
+    Plotly.newPlot('scatterPlot', scatterPlotData);
+    
+    
+    const barChartData = [{
+        x: ['A', 'B', 'C', 'D', 'E'],
+        y: [10, 20, 30, 40, 50],
+        type: 'bar'
+    }];
+    
+    Plotly.newPlot('barChart', barChartData);
+    
+   
+    const pieChartData = [{
+        values: [30, 40, 30],
+        labels: ['Red', 'Blue', 'Yellow'],
+        type: 'pie'
+    }];
+    
+    Plotly.newPlot('pieChart', pieChartData);
+    
+    
+    const donutChartData = [{     
+        values: [30, 40, 30],
+        labels: ['Red', 'Blue', 'Yellow'],
+        type: 'pie',
+        hole: 0.4
+    }];
+    const donutChartLayout = {
+                title: 'Biểu Đồ donutChart',
+                showlegend: false
+            };
+
+    
+    Plotly.newPlot('donutChart', donutChartData);
+});
+document.addEventListener("DOMContentLoaded", function() {
+            
+            const bubbleChartData = [{
+                x: [1, 2, 3, 4, 5],
+                y: [10, 20, 30, 40, 50],
+                marker: {
+                    size: [20, 30, 40, 50, 60]
+                },
+                mode: 'markers',
+                type: 'scatter'
+            }];
+            
+            const bubbleChartLayout = {
+                title: 'Biểu Đồ Bubble Chart',
+                showlegend: false
+
+            };
+            
+            Plotly.newPlot('bubbleChart', bubbleChartData, bubbleChartLayout);
+        });
+
+
+
+
+
+
+    </script>
+</body>
+</html>
